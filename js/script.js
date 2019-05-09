@@ -13,12 +13,8 @@ function getUsd(rub) {
             request.addEventListener('readystatechange', function() {
                 if (request.readyState === 4 && request.status == 200) {
                   resolve();
-                    // let data = JSON.parse(request.response);
-    
-                    // inputUsd.value = rub.value / data.usd;
                 } else {
                   reject();
-                    // inputUsd.value = "Что-то пошло не так!";
                 }
             });
             request.send();
